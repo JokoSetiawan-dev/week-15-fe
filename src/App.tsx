@@ -2,9 +2,9 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "../src/pages";
 import { MainLayout } from "./layout";
-import {  EditCategory } from "./components";
 import React from "react";
 import NewTransaction from "./components/NewTransactionForm";
+import EditTransaction from "./components/EditTransaction";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           }
         />
         <Route path="/newtransaction" element={<NewTransaction />} />
-        <Route path="/category/update" element={<EditCategory />} />
+        <Route path="/transaction/update" element={<EditTransaction />} />
       </Routes>
     </BrowserRouter>
   );
