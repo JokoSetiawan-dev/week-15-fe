@@ -28,8 +28,8 @@ const HomePage: React.FC<DataTableProps> = () => {
         }
       });
       const data = await response.json();
-      setData(data.data);
-      console.log(data.data);
+      setData(data);
+      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -71,8 +71,7 @@ const HomePage: React.FC<DataTableProps> = () => {
         </thead>
         <tbody>
           {data.map((dataItem) => (
-            <tr key={dataItem.id}>
-              <td>{dataItem.id}</td>
+            <tr>
               <td>{dataItem.user_id}</td>
               <td>{dataItem.type}</td>
               <td>{dataItem.amount}</td>
