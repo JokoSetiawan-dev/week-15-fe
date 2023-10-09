@@ -62,6 +62,7 @@ const HomePage: React.FC<DataTableProps> = () => {
           <tr>
             <th scope="col">User_id</th>
             <th scope="col">Type</th>
+            <th scope="col">Amount</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
