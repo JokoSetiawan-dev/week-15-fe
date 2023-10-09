@@ -8,7 +8,7 @@ interface AddDataButtonProps {
 const AddDataButton: React.FC<AddDataButtonProps> = ({ }) => {
   const navigate = useNavigate()
   const handleAdd = () => {
-    navigate('/newcategory')
+    navigate('/newtransaction')
   }
   return (
     <button className='btn btn-primary' onClick={handleAdd}>Add New Data</button>

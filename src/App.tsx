@@ -2,8 +2,9 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "../src/pages";
 import { MainLayout } from "./layout";
-import { NewCategory, EditCategory } from "./components";
+import {  EditCategory } from "./components";
 import React from "react";
+import NewTransaction from "./components/NewTransactionForm";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
             </MainLayout>
           }
         />
-        <Route path="/newcategory" element={<NewCategory />} />
+        <Route path="/newtransaction" element={<NewTransaction />} />
         <Route path="/category/update" element={<EditCategory />} />
       </Routes>
     </BrowserRouter>

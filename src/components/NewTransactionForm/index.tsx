@@ -19,7 +19,7 @@ const NewTransaction: React.FC = () => {
   const navigate = useNavigate();
 
   const handleAddTransaction = async (values: TransactionValue) => {
-    const apiUrl = "https://mock-api.arikmpt.com/api/category/create";
+    const apiUrl = "https://week-15-jokosetiawan-dev-production.up.railway.app/";
 
     try {
       const response = await fetch(apiUrl, {
@@ -52,15 +52,36 @@ const NewTransaction: React.FC = () => {
         <Form>
           <div className="mb-3">
             <label htmlFor="exampleInputName" className="form-label">
-              Name
+              User id
             </label>
             <Field
-              name="name"
-              type="name"
+              name="user_id"
+              type="user_id"
               className="form-control"
-              id="exampleInpuName"
             />
-            <ErrorMessage name="name" />
+            <ErrorMessage name="user_id" />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="exampleInputName" className="form-label">
+              Type
+            </label>
+            <Field
+              name="type"
+              type="type"
+              className="form-control"
+            />
+            <ErrorMessage name="type" />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="exampleInputName" className="form-label">
+              Amount
+            </label>
+            <Field
+              name="amount"
+              type="aount"
+              className="form-control"
+            />
+            <ErrorMessage name="amount" />
           </div>
           <div className="d-grid gap-2">
             <button className="btn btn-primary" type="submit">

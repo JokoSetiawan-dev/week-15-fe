@@ -1,13 +1,6 @@
 import React from "react";
-import {Link} from 'react-router-dom'
-import { useNavigate } from "react-router-dom";
 
 const Navbar: React.FC = () => {
-  const navigate = useNavigate()
-  const handleLogout = () => {
-    localStorage.removeItem('authToken')
-    navigate('/login')
-  }
 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -27,20 +20,6 @@ const Navbar: React.FC = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <Link className="nav-link active" aria-current="page" to="/">
-              Home
-            </Link>
-            <Link className="nav-link" to="/register">
-              Register
-            </Link>
-            <Link className="nav-link" to="/login">
-              Login
-            </Link>
-            <button className="nav-link" onClick={handleLogout}>
-              Logout
-            </button>
-          </div>
         </div>
       </div>
     </nav>

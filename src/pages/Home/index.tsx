@@ -60,6 +60,7 @@ const HomePage: React.FC<DataTableProps> = () => {
       <table className="table">
         <thead>
           <tr>
+            <th scope="col">ID</th>
             <th scope="col">User_id</th>
             <th scope="col">Type</th>
             <th scope="col">Amount</th>
@@ -69,6 +70,7 @@ const HomePage: React.FC<DataTableProps> = () => {
         <tbody>
           {data.map((dataItem) => (
             <tr>
+              <td>{dataItem.id}</td>
               <td>{dataItem.user_id}</td>
               <td>{dataItem.type}</td>
               <td>{dataItem.amount}</td>

@@ -1,3 +1,3 @@
-export { default as  AddDataButton} from './NewCategoryButton'
-export { default as NewCategory} from './NewCategoryForm'
+export { default as  AddDataButton} from './NewTransactionButton'
+export { default as NewTransactionForm} from './NewTransactionForm'
 export { default as EditCategory} from './EditCategory'
