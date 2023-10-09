@@ -25,62 +25,52 @@ const NewTransaction: React.FC = () => {
       const response = await fetch(apiUrl, {
         method: "POST",
         body: JSON.stringify(values),
+        headers: {
+          "Content-Type": "application/json", // Specify the content type
+        },
       });
       const data = await response.json();
       console.log(data);
-      navigate('/')
+      navigate("/");
     } catch (error) {
-      console.log(error);
+      console.error(error); // Use console.error for errors
     }
   };
 
   return (
     <div
       className="row justify-content-center align-items-center"
-      style={{ minHeight: "100vh", maxWidth: "50vh"}}
+      style={{ minHeight: "100vh", maxWidth: "50vh" }}
     >
       <Formik
         initialValues={{
           user_id: 1,
           type: "",
-          amount: 1
-
+          amount: 1,
         }}
         validationSchema={TransactionSchema}
         onSubmit={handleAddTransaction}
       >
         <Form>
           <div className="mb-3">
-            <label htmlFor="exampleInputName" className="form-label">
+            <label htmlFor="user_id" className="form-label">
               User id
             </label>
-            <Field
-              name="user_id"
-              type="user_id"
-              className="form-control"
-            />
+            <Field name="user_id" type="number" className="form-control" />
             <ErrorMessage name="user_id" />
           </div>
           <div className="mb-3">
-            <label htmlFor="exampleInputName" className="form-label">
+            <label htmlFor="type" className="form-label">
               Type
             </label>
-            <Field
-              name="type"
-              type="type"
-              className="form-control"
-            />
+            <Field name="type" type="text" className="form-control" />
             <ErrorMessage name="type" />
           </div>
           <div className="mb-3">
-            <label htmlFor="exampleInputName" className="form-label">
+            <label htmlFor="amount" className="form-label">
               Amount
             </label>
-            <Field
-              name="amount"
-              type="aount"
-              className="form-control"
-            />
+            <Field name="amount" type="number" className="form-control" />
             <ErrorMessage name="amount" />
           </div>
           <div className="d-grid gap-2">
@@ -94,4 +84,4 @@ const NewTransaction: React.FC = () => {
   );
 };
 
-export default NewTransaction
+export default NewTransaction;
