@@ -22,10 +22,7 @@ const HomePage: React.FC<DataTableProps> = () => {
     const apiUrl = "https://week-15-jokosetiawan-dev-production.up.railway.app/";
     try {
       const response = await fetch(apiUrl, {
-        method: "GET",
-        headers:{
-          contentType: "application/json"
-        }
+        method: "GET"
       });
       const data = await response.json();
       setData(data);
