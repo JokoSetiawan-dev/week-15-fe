@@ -25,8 +25,8 @@ const HomePage: React.FC<DataTableProps> = () => {
         method: "GET"
       });
       const data = await response.json();
-      setData(data);
-      console.log(data);
+      setData(data.data);
+      console.log(data.data);
     } catch (error) {
       console.log(error);
     }
@@ -60,7 +60,6 @@ const HomePage: React.FC<DataTableProps> = () => {
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">Id</th>
             <th scope="col">User_id</th>
             <th scope="col">Type</th>
             <th scope="col">Action</th>
