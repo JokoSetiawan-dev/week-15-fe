@@ -24,7 +24,7 @@ const HomePage: React.FC<DataTableProps> = () => {
       const response = await fetch(apiUrl, {
         method: "GET",
         headers:{
-          
+          contentType: "application/json"
         }
       });
       const data = await response.json();
